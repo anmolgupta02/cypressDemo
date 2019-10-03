@@ -15,7 +15,7 @@ describe("First Demo Script", function(){
         cy.get('.col-12 > .btn').click()
 
         //Commit issues 
-    
+
         //cy.get('Prince@rsk-bsl.com').should('be.visible')
         cy.get('.nav > :nth-child(1) > a').should('have.value','Prince@rsk-bsl.com')
     })
