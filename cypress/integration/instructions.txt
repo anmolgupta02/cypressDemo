@@ -1,0 +1,5 @@
+
+In order to run cypress in headless mode, run command npx cypress run
+And in order to run cypress in UI mode, run command npx cypres open 
+Describe is basically used to make the grouping of test possible
+To add before kind of functionality add, beforeEach(() => ) and add desired steps

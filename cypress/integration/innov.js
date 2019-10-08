@@ -1,6 +1,6 @@
 /// <reference types = "cypress" />
 
-describe("First Demo Script", function(){
+describe("First Demo Script", () => {
     it('navigates to inno veg site and tries to log in', function(){
         cy.visit('http://innoveg-demo.rsk-bsl.co.uk/en')
 
@@ -18,6 +18,6 @@ describe("First Demo Script", function(){
         //Commit issues 
 
         //cy.get('Prince@rsk-bsl.com').should('be.visible')
-        cy.get('.nav > :nth-child(1) > a').should('have.value','Prince@rsk-bsl.com')
+        //cy.get('.nav > :nth-child(1) > a').should('have.value','Prince@rsk-bsl.com')
     })
 })
