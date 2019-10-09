@@ -1,4 +1,5 @@
-import pageObject from '../Pages/pageObject'
+import { pageObject } from '../Pages/pageObject'
+import { adminpage } from '../Pages/adminPage'
 /// <reference types = "cypress" />
 
 describe("Navigation and Login Check", () => {
@@ -11,5 +12,14 @@ describe("Navigation and Login Check", () => {
         po.login('Prince@rsk-bsl.com', 'Prince@123')
         
         po.CheckLogin('Prince@rsk-bsl.com')
+
+        po.NavigateToAdminSettings()
+    })
+
+    it('Checks for the Admin Related Functionality', () => {
+
+        const hp = new adminpage()
+
+        hp.checkTitle('RoyalUI Dashboard')
     })
 })      

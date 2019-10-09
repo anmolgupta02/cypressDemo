@@ -48,6 +48,23 @@ class pageObject{
     //     var data = excel_sheet.cells(0,0).value; //x,y consider the coordinate of row and column or the data 
     //     return data;
     }
+
+    clickProfileDD(){
+
+        let profileIcon = cy.get('#profileDropdown')
+        profileIcon.click()
+    }
+
+    clickAdminSetting(){
+       const adminSettingTrigger = cy.get('[href="/en/Admin"]')
+       adminSettingTrigger.click()
+    
+    }
+
+    NavigateToAdminSettings(){
+       this.clickProfileDD()
+       this.clickAdminSetting() 
+    }
 }
 
 export default pageObject;
