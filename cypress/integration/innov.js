@@ -8,10 +8,8 @@ describe("Navigation, Login and Admin Navigation", () => {
         const po = new pageObject()
 
         po.navigation()
-
-        //const username = po.getValue()
-        //console.log(username)   
-        po.login('Prince@rsk-bsl.com', 'Prince@123')
+        
+        po.login('fixtures:data:username', 'Prince@123')
 
         po.CheckLogin('Prince@rsk-bsl.com')
 

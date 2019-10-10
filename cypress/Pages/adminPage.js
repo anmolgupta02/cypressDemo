@@ -1,8 +1,8 @@
 /// <reference types = "cypress" />
 
-export default class adminPage{
+export default class adminPage {
 
-    checkTitle(expectedTitle){
+    checkTitle(expectedTitle) {
         const actualTitle = cy.get('.font-weight-bold')
         actualTitle.should('have.text', expectedTitle)
     }
