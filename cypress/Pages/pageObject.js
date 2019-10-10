@@ -1,33 +1,33 @@
 /// <reference types = "cypress" />
 
-class pageObject{
-    navigation(){
+class pageObject {
+    navigation() {
         cy.visit('http://innoveg-demo.rsk-bsl.co.uk/en')
 
     }
 
-    clickLoginTrigger(){
+    clickLoginTrigger() {
         const trigger = cy.get('#loginLink')
-        trigger.click() 
+        trigger.click()
     }
 
-    fillEmail(username){
+    fillEmail(username) {
         const emailField = cy.get('#Email')
         emailField.type(username)
     }
 
-    fillPassword(Password){
-        const passField =  cy.get('#Password') 
+    fillPassword(Password) {
+        const passField = cy.get('#Password')
         passField.type(Password)
     }
 
-    clickButton(){
+    clickButton() {
         const button = cy.get('.col-12 > .btn')
         button.click()
     }
 
 
-    login(username, Password){
+    login(username, Password) {
         //cy.url().should('include','/Account/Login')
         this.clickLoginTrigger()
         this.fillEmail(username)
@@ -35,10 +35,10 @@ class pageObject{
         this.clickButton()
     }
 
-    CheckLogin(expectedText){
-      const emailHolder =  cy.get('.nav > :nth-child(1) > a')
-      emailHolder.should('have.text',expectedText)
- 
+    CheckLogin(expectedText) {
+        const emailHolder = cy.get('.nav > :nth-child(1) > a')
+        emailHolder.should('have.text', expectedText)
+
     }
 
     // getValue(){
@@ -48,21 +48,21 @@ class pageObject{
     // //     return data;
     // }
 
-    clickProfileDD(){
+    clickProfileDD() {
 
         let profileIcon = cy.get('#profileDropdown')
         profileIcon.click()
     }
 
-    clickAdminSetting(){
-       const adminSettingTrigger = cy.get('[href="/en/Admin"]')
-       adminSettingTrigger.click()
-    
+    clickAdminSetting() {
+        const adminSettingTrigger = cy.get('[href="/en/Admin"]')
+        adminSettingTrigger.click()
+
     }
 
-    NavigateToAdminSettings(){
-       this.clickProfileDD()
-       this.clickAdminSetting() 
+    NavigateToAdminSettings() {
+        this.clickProfileDD()
+        this.clickAdminSetting()
     }
 }
 
