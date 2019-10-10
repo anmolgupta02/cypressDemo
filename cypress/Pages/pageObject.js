@@ -1,7 +1,6 @@
 /// <reference types = "cypress" />
 
 class pageObject{
-
     navigation(){
         cy.visit('http://innoveg-demo.rsk-bsl.co.uk/en')
 
@@ -42,12 +41,12 @@ class pageObject{
  
     }
 
-    getValue(){
-    //     var excel=new ActiveXObject("Excel.Application"); excel.Workbooks.Open("my.xls");
-    //      excel.workbooks.open("my.xls");
-    //     var data = excel_sheet.cells(0,0).value; //x,y consider the coordinate of row and column or the data 
-    //     return data;
-    }
+    // getValue(){
+    // //     var excel=new ActiveXObject("Excel.Application"); excel.Workbooks.Open("my.xls");
+    // //      excel.workbooks.open("my.xls");
+    // //     var data = excel_sheet.cells(0,0).value; //x,y consider the coordinate of row and column or the data 
+    // //     return data;
+    // }
 
     clickProfileDD(){
 
@@ -67,4 +66,4 @@ class pageObject{
     }
 }
 
-export default pageObject;
+export default pageObject

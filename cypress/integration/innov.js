@@ -1,13 +1,15 @@
-import { pageObject } from '../Pages/pageObject'
-import { adminpage } from '../Pages/adminPage'
+import  pageObject  from '../Pages/pageObject'
+import  adminpage  from '../Pages/adminPage'
 /// <reference types = "cypress" />
 
-describe("Navigation and Login Check", () => {
-    it('navigates to inno veg site and tries to log in', () =>{
+describe("Navigation, Login and Admin Navigation", () =>{
+    
+    it('navigates to inno veg site and tries to log in', () => {
         const po = new pageObject()
+
         po.navigation()
         
-        const username = po.getValue()
+        //const username = po.getValue()
         //console.log(username)   
         po.login('Prince@rsk-bsl.com', 'Prince@123')
         
